@@ -1,41 +1,104 @@
-# 🦆 DeccanVault
+# ⛏️ Strata Quarry
 
-DeccanVault is a **self-hosted object storage service** inspired by cloud storage solutions, but lightweight and easy to run on your own infrastructure.  
+> **Build cloud infrastructure from first principles.**
+>
+> Strata Quarry is a **self-hosted object storage service** inspired by cloud storage solutions, but lightweight and easy to run on your own infrastructure.  
 It is built with **Node.js + Nitro** and designed for developers who want full control over their data without depending on third-party providers.
 
-## ✨ Features (Planned & In Progress)
 
-- 📦 **Buckets**: Organize your data into logical containers
-- 📂 **Object Storage**: Store, retrieve, and delete files with simple APIs
-- 🛠️ **S3-like REST Endpoints** (but simpler & fully open-source)
-- ⚡ **Lightweight**: Runs anywhere Node.js runs (local machine, VPS, Docker, k8s)
-- 🔒 **Customizable**: Extend with middleware, authentication, or logging
-
-## 📌 Why DeccanVault?
+## ✨ Why?
 
 - You want a **private alternative** to S3 for small projects or local dev
 - You’re learning how object storage systems are built under the hood
 - You want to run your own storage service on **local hardware** or **cloud VMs**
 
+## 🚀 Features
+
+### ✅ Current
+
+* 🪣 Bucket creation
+* 💾 Filesystem storage
+* 📄 Zod validation
+* ⚡ Nitro API routes
+* 🛡️ Structured error handling
+* 🔷 TypeScript
+
+### 🛣️ Coming Soon
+
+* 📁 Object upload & download
+* 🔍 Object listing
+* 🔐 Authentication & IAM
+* 🔗 Signed URLs
+* 📦 Multipart uploads
+* 🌍 Distributed storage
+* 📊 Metrics & monitoring
+* 💻 CLI & SDK
+
+---
+
+## 🏗️ Architecture
+
+```text
+Client
+   │
+   ▼
+Nitro Routes
+   │
+   ▼
+Services
+   │
+   ▼
+Storage
+   │
+   ▼
+Filesystem
+```
+
+Each layer has one responsibility, keeping the code simple and easy to understand.
+
+---
+
+## 📂 Project Structure
+
+```
+deccan-vault/
+├── server/
+│   ├── middleware/          # Global middleware (e.g., error handling, logging)
+│   ├── routes/              # REST API endpoints
+│   └── utils/               # Utilities (custom errors, helpers)
+├── .gitignore
+├── package.json
+└── README.md
+```
+
+---
+
 ## 🚀 Installation
 
-### 1. Clone the repository
+### Prerequisites
 
-### 2. Install dependencies
+* Node.js 20+
+* pnpm (recommended)
+
+### Installation
 
 ```bash
+git clone https://github.com/<your-username>/strata-quarry.git
+
+cd strata-quarry
+
 pnpm install
 ```
 
-### 3. Run the development server
+### Run the development server
 
 ```bash
-pnpm run dev
+pnpm dev
 ```
 
-The service will be available at:
+The API will be available at:
 
-```
+```text
 http://localhost:3000
 ```
 
@@ -51,26 +114,23 @@ Expected response
 { "status": "ok", "service": "DeccanVault" }
 ```
 
-## 📂 Project Structure
 
-```
-deccan-vault/
-├── server/
-│   ├── middleware/          # Global middleware (e.g., error handling, logging)
-│   ├── routes/              # REST API endpoints
-│   └── utils/               # Utilities (custom errors, helpers)
-├── .gitignore
-├── package.json
-└── README.md
-```
+---
 
-## 🎯 Roadmap
+## 🗺️ Roadmap
 
-- [x] Phase 0 → Scaffold project, error handling, health check
-- [x] Phase 1 → Implement Bucket CRUD (create, list, delete buckets)
-- [ ] Phase 2 → Implement Object CRUD (upload, fetch, delete files)
-- [ ] Phase 3 → Add metadata, policies, and authentication
-- [ ] Phase 4 → Optional dashboard UI
+* ✅ Foundation
+* ✅ Bucket Management
+* 🚧 Bucket API
+* ⏳ Object Storage
+* ⏳ Security & IAM
+* ⏳ Signed URLs
+* ⏳ Production Features
+* ⏳ Distributed Storage
+* ⏳ Enterprise Features
+
+
+---
 
 ## 📜 License
 
