@@ -1,5 +1,5 @@
 {
-  "name": "deccan-vault",
+  "name": "strata-quarry",
   "private": true,
   "version": "0.0.1",
   "author": "Harish Pillarisetti",
@@ -13,7 +13,8 @@
     "nitro": "latest",
     "tsx": "^4.22.4"
   },
-  "packageManager": "pnpm@11.9.0",
+  "packageManager": "pnpm@11.13.1",
+  "type": "module",
   "dependencies": {
     "zod": "^4.4.3"
   }
